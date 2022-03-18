@@ -114,7 +114,7 @@ class PubMedJson:
                                     temp_labels[word_pos + index] = f"I-{mention._biolink_type}"
                     if matches_found == len(words_in_mention):
                         labels.update(temp_labels)
-        iob_labels = ["0" for x in words]
+        iob_labels = ["O" for x in words]
 
         for index in labels:
             iob_labels[index] = labels[index]
